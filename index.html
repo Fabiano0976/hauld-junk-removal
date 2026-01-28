@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HAULD Junk Removal | Fast, Affordable, Reliable</title>
+  <meta name="description" content="HAULD Junk Removal — fast pickup, fair prices, and clean work. Get a free quote today."/>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#121a2b;
+      --text:#e8eefc;
+      --muted:#a9b7d6;
+      --accent:#4f8cff;
+      --accent2:#42d392;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 16px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(79,140,255,.25), transparent 60%),
+                  radial-gradient(800px 500px at 90% 20%, rgba(66,211,146,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.70);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.6px;
+    }
+    .logo{
+      width:40px; height:40px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: var(--shadow);
+      display:grid; place-items:center;
+      font-weight:900;
+    }
+    .navlinks{display:flex; gap:16px; flex-wrap:wrap; color:var(--muted); font-weight:600}
+    .navlinks a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:800;
+      cursor:pointer;
+      transition: transform .08s ease, background .2s ease;
+      user-select:none;
+    }
+    .btn:hover{background: rgba(255,255,255,.10)}
+    .btn:active{transform: scale(.98)}
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#08101f;
+    }
+    .hero{
+      padding:38px 0 22px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:24px;
+      align-items:stretch;
+    }
+    .card{
+      background: rgba(18,26,43,.78);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-left{padding:26px}
+    .kicker{color:var(--muted); font-weight:700; letter-spacing:.18em; text-transform:uppercase; font-size:12px}
+    h1{
+      margin:10px 0 10px;
+      font-size:42px;
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+    .lead{color:var(--muted); font-size:16px; margin:0 0 16px}
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 18px}
+    .pill{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+    }
+    .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+    .hero-right{padding:18px}
+    .mini{
+      padding:18px;
+    }
+    .mini h3{margin:0 0 8px; font-size:18px}
+    .mini p{margin:0 0 12px; color:var(--muted)}
+    .grid{
+      display:grid; gap:14px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top:14px;
+    }
+    .tile{
+      padding:16px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+    .tile b{display:block; margin-bottom:6px}
+    .tile span{color:var(--muted); font-size:14px}
+    section{padding:18px 0}
+    .sectionTitle{
+      display:flex; align-items:end; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      margin:4px 0 12px;
+    }
+    .sectionTitle h2{margin:0; font-size:26px}
+    .sectionTitle p{margin:0; color:var(--muted)}
+    .services{
+      display:grid; gap:14px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .service{padding:18px}
+    .service h3{margin:0 0 8px}
+    .service p{margin:0; color:var(--muted)}
+    .twoCol{
+      display:grid; gap:14px;
+      grid-template-columns: 1fr 1fr;
+    }
+    .list{
+      padding:18px;
+    }
+    .list ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .list li{margin:6px 0}
+    .quote{
+      padding:18px;
+    }
+    form{display:grid; gap:10px}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .small{font-size:13px; color:var(--muted)}
+    footer{
+      margin-top:18px;
+      border-top:1px solid var(--line);
+      padding:20px 0 30px;
+      color:var(--muted);
+    }
+    .footRow{display:flex; gap:12px; justify-content:space-between; flex-wrap:wrap}
+    .hideMobile{display:inline}
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .services{grid-template-columns:1fr}
+      .twoCol{grid-template-columns:1fr}
+      h1{font-size:36px}
+      .hideMobile{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <div class="logo">H</div>
+        <div>
+          <div style="font-size:16px;">HAULD</div>
+          <div style="font-size:12px; color:var(--muted); font-weight:700;">Junk Removal</div>
+        </div>
+      </a>
+      <nav class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#areas">Areas</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#quote">Quote</a>
+      </nav>
+      <a class="btn primary" href="#quote">Get a Quote</a>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <div class="hero">
+      <div class="card hero-left">
+        <div class="kicker">FAST • CLEAN • AFFORDABLE</div>
+        <h1>HAULD Junk Removal<br/>We haul it so you don’t have to.</h1>
+        <p class="lead">
+          Same-day or next-day junk pickup. We remove furniture, trash, appliances, yard waste,
+          garage cleanouts, and more. Fair pricing, no drama.
+        </p>
+
+        <div class="pillrow">
+          <div class="pill">✅ Free estimates</div>
+          <div class="pill">✅ Reliable scheduling</div>
+          <div class="pill">✅ Clean work</div>
+          <div class="pill">✅ Cash / Zelle / Card</div>
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="#quote">Request a Free Quote</a>
+          <a class="btn" href="#services">See Services</a>
+        </div>
+
+        <div class="grid">
+          <div class="tile">
+            <b>Quick Pickup</b>
+            <span>Book in minutes. We show up on time and get it done.</span>
+          </div>
+          <div class="tile">
+            <b>Upfront Pricing</b>
+            <span>Price based on volume + special items. No surprises.</span>
+          </div>
+          <div class="tile">
+            <b>We Clean After</b>
+            <span>We leave the area neat when the haul is complete.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card hero-right">
+        <div class="mini">
+          <h3>Call / Text</h3>
+          <p class="small">Put your phone number here:</p>
+          <a class="btn" id="phoneBtn" href="tel:+10000000000">+1 (000) 000-0000</a>
+          <div style="height:10px"></div>
+          <h3>Business Hours</h3>
+          <p class="small">Mon–Sat: 8am–7pm<br/>Sun: 10am–4pm</p>
+          <div style="height:10px"></div>
+          <h3 class="hideMobile">What we take</h3>
+          <p class="small hideMobile">Furniture, mattresses, appliances, scrap, trash, yard waste, garage cleanouts, small demo.</p>
+          <div style="height:14px"></div>
+          <a class="btn primary" href="#quote">Get Quote Now</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="sectionTitle">
+        <h2>Services</h2>
+        <p>Residential & small business</p>
+      </div>
+      <div class="services">
+        <div class="card service">
+          <h3>Junk Pickup</h3>
+          <p>Single item to full load. Furniture, trash, appliances, and general clutter.</p>
+        </div>
+        <div class="card service">
+          <h3>Cleanouts</h3>
+          <p>Garage, basement, attic, storage units, rentals, and move-out cleanouts.</p>
+        </div>
+        <div class="card service">
+          <h3>Yard Waste</h3>
+          <p>Branches, leaves, debris, and outdoor cleanup. We can load everything.</p>
+        </div>
+        <div class="card service">
+          <h3>Donation / Recycling</h3>
+          <p>When possible, we donate or recycle items to reduce landfill waste.</p>
+        </div>
+        <div class="card service">
+          <h3>Light Demolition</h3>
+          <p>Sheds, small decks, and interior tear-out (non-structural). Ask for details.</p>
+        </div>
+        <div class="card service">
+          <h3>Moving Help</h3>
+          <p>Need a hand loading/unloading? We can help with small moves too.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="twoCol">
+      <div class="card list">
+        <div class="sectionTitle" style="margin:0 0 8px">
+          <h2>Simple Pricing</h2>
+          <p>based on volume + special items</p>
+        </div>
+        <ul>
+          <li><b>Minimum pickup</b> (1–2 items): starting at <span class="small">$XX</span></li>
+          <li><b>¼ truck</b>: <span class="small">$XX–$XX</span></li>
+          <li><b>½ truck</b>: <span class="small">$XX–$XX</span></li>
+          <li><b>Full load</b>: <span class="small">$XX–$XX</span></li>
+          <li class="small">Special items may cost extra (tires, refrigerators, hazardous materials, etc.).</li>
+        </ul>
+      </div>
+
+      <div class="card list" id="areas">
+        <div class="sectionTitle" style="margin:0 0 8px">
+          <h2>Areas We Serve</h2>
+          <p>edit to your city/state</p>
+        </div>
+        <ul>
+          <li>Worcester, MA</li>
+          <li>Framingham, MA</li>
+          <li>Providence, RI</li>
+          <li>Milford, MA</li>
+          <li class="small">+ nearby areas (ask!)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="quote">
+      <div class="sectionTitle">
+        <h2>Request a Free Quote</h2>
+        <p>We’ll reply fast (call/text)</p>
+      </div>
+
+      <div class="card quote">
+        <form id="quoteForm">
+          <input name="name" placeholder="Your name" required />
+          <input name="phone" placeholder="Phone number" required />
+          <input name="address" placeholder="Pickup address (city is ok)" />
+          <textarea name="details" placeholder="What do you need removed? (items + quantity)"></textarea>
+          <button class="btn primary" type="submit">Send Quote Request</button>
+          <div class="small">
+            This form opens your phone/email with a pre-filled message. (No server needed.)
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footRow">
+        <div>
+          <b style="color:var(--text)">HAULD Junk Removal</b><br/>
+          <span class="small">Fast • Affordable • Reliable</span>
+        </div>
+        <div class="small">
+          © <span id="year"></span> HAULD • All rights reserved
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // ✅ EDIT THESE 3 THINGS:
+    const BUSINESS_PHONE = "+1 (000) 000-0000";
+    const TEL_LINK = "+10000000000"; // phone numbers only, no spaces
+    const QUOTE_EMAIL = "hauldjunkremoval@email.com"; // optional
+
+    // Apply phone to button
+    const phoneBtn = document.getElementById("phoneBtn");
+    phoneBtn.textContent = BUSINESS_PHONE;
+    phoneBtn.href = "tel:" + TEL_LINK;
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Form: open SMS or email with pre-filled message (no backend)
+    document.getElementById("quoteForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const name = data.get("name") || "";
+      const phone = data.get("phone") || "";
+      const address = data.get("address") || "";
+      const details = data.get("details") || "";
+
+      const msg =
+`HAULD Junk Removal - Quote Request
+Name: ${name}
+Phone: ${phone}
+Address: ${address}
+Details: ${details}`.trim();
+
+      // If email is set, use mailto. Otherwise use sms.
+      if (QUOTE_EMAIL && QUOTE_EMAIL.includes("@")) {
+        const subject = encodeURIComponent("HAULD - Quote Request");
+        const body = encodeURIComponent(msg);
+        window.location.href = `mailto:${QUOTE_EMAIL}?subject=${subject}&body=${body}`;
+      } else {
+        // SMS: note: desktop may not support sms: links
+        const smsBody = encodeURIComponent(msg);
+        window.location.href = `sms:${TEL_LINK}?&body=${smsBody}`;
+      }
+    });
+  </script>
+</body>
+</html>
